@@ -25,8 +25,7 @@
     if (!self) {
         return self;
     }
-    [SVProgressHUD setBackgroundColor:[UIColor grayColor]];
-    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     return self;
 }
 
