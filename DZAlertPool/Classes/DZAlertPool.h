@@ -19,6 +19,9 @@
 #define DZAlertHUDSuccess(message) [DZDefaultAlertPool showHUDSccessWithMessage:message];
 #define DZAlertHUDFailure(message) [DZDefaultAlertPool showHUDFailureWithMessage:message];
 
+#define DZAlertDisableIntereact [DZDefaultAlertPool disableUserInteract]
+#define DZAlertEnableIntereact [DZDefaultAlertPool enableuserInteract]
+
 @interface DZAlertPool : NSObject
 + (DZAlertPool*) defaultPool;
 - (void) showLoadingWithMessage:(NSString*)msg;
@@ -30,4 +33,7 @@
 - (void) showHUDSccessWithMessage:(NSString *)message;
 - (void) showHUDFailureWithMessage:(NSString *)message;
 - (void) hideAllAlert;
+
+- (void) disableUserInteract;
+- (void) enableuserInteract;
 @end

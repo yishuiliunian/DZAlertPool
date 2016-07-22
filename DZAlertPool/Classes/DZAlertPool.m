@@ -26,12 +26,24 @@
         return self;
     }
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    [SVProgressHUD setMinimumDismissTimeInterval:2];
     return self;
 }
 
 - (void) hideAllAlert
 {
     [SVProgressHUD dismiss];
+}
+
+- (void) disableUserInteract
+{
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+
+}
+- (void) enableuserInteract
+{
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeNone];
+
 }
 - (void) showLoadingWithMessage:(NSString*)msg
 {
